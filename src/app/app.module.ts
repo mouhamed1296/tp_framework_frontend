@@ -7,6 +7,10 @@ import { AdminUserComponent } from './admin-user/admin-user.component';
 import { SimpleUserComponent } from './simple-user/simple-user.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { ConnexionComponent } from './connexion/connexion.component';
+import { HeaderComponent } from './header/header.component';
+import { PaginationComponent } from './pagination/pagination.component';
+import { ArchiveListComponent } from './archive-list/archive-list.component';
+import { ActiveListComponent } from './active-list/active-list.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { ConnexionComponent } from './connexion/connexion.component';
     AdminUserComponent,
     SimpleUserComponent,
     InscriptionComponent,
-    ConnexionComponent
+    ConnexionComponent,
+    HeaderComponent,
+    PaginationComponent,
+    ArchiveListComponent,
+    ActiveListComponent
   ],
   imports: [
     BrowserModule,
