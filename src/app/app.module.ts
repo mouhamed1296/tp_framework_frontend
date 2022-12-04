@@ -1,7 +1,6 @@
  import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminUserComponent } from './admin-user/admin-user.component';
@@ -26,9 +25,9 @@ import { ActiveListComponent } from './active-list/active-list.component';
     ActiveListComponent
   ],
   imports: [
+    ReactiveFormsModule ,
     BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule 
+    AppRoutingModule  
   ],
   providers: [],
   bootstrap: [AppComponent]
