@@ -6,7 +6,7 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { HeaderComponent } from './header/header.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { SimpleUserComponent } from './simple-user/simple-user.component';
-
+/* mais vues */
 const routes: Routes = [
   RouterModule.forRoot([
     {path:"admin", component: AdminUserComponent},

@@ -11,14 +11,15 @@ export class ConnexionComponent {
     registerForm!:FormGroup
     
     submitted=false
-   
+   /* on a injecter formbuilder de type formbuilder */
     constructor(private formBuilder:FormBuilder){}
-    
+   
+    /* on appel formbuilder & le group et lister les champs */
     ngOnInit(){
       this.registerForm = this.formBuilder.group({
-       
-        email:['',[Validators.required,Validators.email]],
-        password:['',[Validators.required,Validators.minLength(8)]]
+        email:['',[Validators.required,Validators.email,
+          Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{3,4}$")]],
+        password:['',[Validators.required,Validators.minLength(6)]]
       })
     }
   
