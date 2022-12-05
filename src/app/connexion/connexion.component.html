@@ -9,14 +9,14 @@
             <div class="card" style="border-radius: 15px; width: 120%;height: 600px;">
               <div class="card-body p-5">
                 <h2 class="text-uppercase text-center mb-5">PAGE DE CONNEXION</h2>
-  
+
                  <form (submit)="onSubmit()" [formGroup]="registerForm">
                     <div class="form-outline mb-4">
                       <!-- explication controle saisie à faire -->
                     <label class="form-label" for="form3Example3cg">Email</label>
                     <input type="email" id="form3Example3cg" class="form-control form-control-lg "name = "email" placeholder = "email"
-                     
-                    [ngClass]="{'is-invalid':submitted && registerForm.controls['email'].errors}" formControlName="email" 
+
+                    [ngClass]="{'is-invalid':submitted && registerForm.controls['email'].errors}" formControlName="email"
                     />
                     <div *ngIf="submitted && registerForm.controls['email'].errors" class="text-danger">
                       <div *ngIf="submitted && registerForm.controls['email'].errors['required']">
@@ -27,13 +27,13 @@
                       </div>
                     </div>
                    </div>
-                   
+
                   <div class="form-outline mb-4">
                     <label class="form-label" for="form3Example4cg">Password</label>
                     <input type="password" id="form3Example4cg" class="form-control form-control-lg "name = "passwd"
-                    placeholder = "passwd" formControlName = "passwd"  minlength="5" 
-                   
-                    [ngClass]="{'is-invalid':submitted && registerForm.controls['password'].errors}" formControlName="password" 
+                    placeholder = "passwd" formControlName = "passwd"  minlength="5"
+
+                    [ngClass]="{'is-invalid':submitted && registerForm.controls['password'].errors}" formControlName="password"
                     />
                     <!-- controle de saisie & component.ts -->
                     <div *ngIf="submitted && registerForm.controls['password'].errors" class="text-danger">
@@ -61,4 +61,4 @@
       </div>
     </div>
   </section>
-  
+

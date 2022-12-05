@@ -10,6 +10,7 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { HeaderComponent } from './header/header.component';
 import { ArchiveListComponent } from './archive-list/archive-list.component';
 import { ActiveListComponent } from './active-list/active-list.component';
+import { SampleComponent } from './sample/sample.component';
 
 
 
@@ -23,7 +24,8 @@ import { ActiveListComponent } from './active-list/active-list.component';
     ConnexionComponent,
     HeaderComponent,
     ArchiveListComponent,
-    ActiveListComponent
+    ActiveListComponent,
+    SampleComponent
   ],
   imports: [
     ReactiveFormsModule ,
@@ -35,5 +37,5 @@ import { ActiveListComponent } from './active-list/active-list.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
- 
+
 

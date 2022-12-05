@@ -8,15 +8,12 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { SimpleUserComponent } from './simple-user/simple-user.component';
 /* mais vues */
 const routes: Routes = [
-  RouterModule.forRoot([
     {path:"admin", component: AdminUserComponent},
     {path: 'simple', component: SimpleUserComponent},
     {path: 'heroes-list', component: ActiveListComponent},
-    {path:"connecte", component: ConnexionComponent},
+    {path:"", pathMatch: "full", component: ConnexionComponent},
     {path: 'inscrire', component: InscriptionComponent},
     {path: 'entete', component: HeaderComponent},
-    
-  ])
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
