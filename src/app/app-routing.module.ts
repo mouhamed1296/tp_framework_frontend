@@ -11,7 +11,7 @@ const routes: Routes = [
     {path:"admin", component: AdminUserComponent},
     {path: 'simple', component: SimpleUserComponent},
     {path: 'heroes-list', component: ActiveListComponent},
-    {path:"connecte", component: ConnexionComponent},
+    {path:"", pathMatch: "full", component: ConnexionComponent},
     {path: 'inscrire', component: InscriptionComponent},
     {path: 'entete', component: HeaderComponent},
 ];
