@@ -5,7 +5,6 @@ import { AdminUserComponent } from './admin-user/admin-user.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { HeaderComponent } from './header/header.component';
 import { InscriptionComponent } from './inscription/inscription.component';
-import { PaginationComponent } from './pagination/pagination.component';
 import { SimpleUserComponent } from './simple-user/simple-user.component';
 
 const routes: Routes = [
@@ -16,7 +15,6 @@ const routes: Routes = [
     {path:"connecte", component: ConnexionComponent},
     {path: 'inscrire', component: InscriptionComponent},
     {path: 'entete', component: HeaderComponent},
-    {path: 'pagine', component: PaginationComponent}
     
   ])
 ];

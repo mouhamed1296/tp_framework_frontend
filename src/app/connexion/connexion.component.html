@@ -10,19 +10,37 @@
               <div class="card-body p-5">
                 <h2 class="text-uppercase text-center mb-5">PAGE DE CONNEXION</h2>
   
-                 <form>
+                 <form (submit)="onSubmit()" [formGroup]="registerForm">
                     <div class="form-outline mb-4">
                     <label class="form-label" for="form3Example3cg">Email</label>
-                    <input type="email" id="form3Example3cg" class="form-control form-control-lg "name = "emailid" placeholder = "emailid"
-                    formControlName = "form3Example3cg" required/>
-
+                    <input type="email" id="form3Example3cg" class="form-control form-control-lg "name = "email" placeholder = "email"
+                     
+                    [ngClass]="{'is-invalid':submitted && registerForm.controls['email'].errors}" formControlName="email" 
+                    />
+                    <div *ngIf="submitted && registerForm.controls['email'].errors" class="text-danger">
+                      <div *ngIf="submitted && registerForm.controls['email'].errors['required']">
+                        Email Address is required
+                      </div>
+                      <div *ngIf="submitted && registerForm.controls['email'].errors['email']">
+                        Email Address is not Valid
+                      </div>
+                    </div>
                    </div>
                    
                   <div class="form-outline mb-4">
                     <label class="form-label" for="form3Example4cg">Password</label>
                     <input type="password" id="form3Example4cg" class="form-control form-control-lg "name = "passwd"
-                    placeholder = "passwd" formControlName = "passwd"  minlength="5" required />
-                   
+                    placeholder = "passwd" formControlName = "passwd"  minlength="5" 
+                    [ngClass]="{'is-invalid':submitted && registerForm.controls['password'].errors}" formControlName="password" 
+                    />
+                    <div *ngIf="submitted && registerForm.controls['password'].errors" class="text-danger">
+                      <div *ngIf="submitted && registerForm.controls['password'].errors['required']">
+                        Password is required
+                      </div>
+                      <div *ngIf="submitted && registerForm.controls['password'].errors['minlength']">
+                        Password should be atleast 8 characters
+                      </div>
+                    </div>
                 
                   </div>
                     <div class="d-flex justify-content-center">
