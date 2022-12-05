@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { ArchiveListComponent } from './archive-list/archive-list.component';
 import { ActiveListComponent } from './active-list/active-list.component';
+import { SampleComponent } from './sample/sample.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ActiveListComponent } from './active-list/active-list.component';
     HeaderComponent,
     PaginationComponent,
     ArchiveListComponent,
-    ActiveListComponent
+    ActiveListComponent,
+    SampleComponent
   ],
   imports: [
     BrowserModule,
