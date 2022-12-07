@@ -10,16 +10,18 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { HeaderComponent } from './header/header.component';
 import { ArchiveListComponent } from './archive-list/archive-list.component';
 import { ActiveListComponent } from './active-list/active-list.component';
-import { CostumerrorDirective } from './costumerror.directive';
+import { SampleComponent } from './sample/sample.component';
 import { InputComponent } from './input/input.component';
 import { SelectComponent } from './select/select.component';
-import { SampleComponent } from './sample/sample.component';
-import {TableModule} from 'primeng/table';
+import { ModificationComponent } from './modification/modification.component';
+
 
 
 
 @NgModule({
   declarations: [
+  InputComponent,
+  SelectComponent,
     AppComponent,
     AdminUserComponent,
     SimpleUserComponent,
@@ -28,17 +30,15 @@ import {TableModule} from 'primeng/table';
     HeaderComponent,
     ArchiveListComponent,
     ActiveListComponent,
-    CostumerrorDirective,
-    InputComponent,
-    SelectComponent,
-    SampleComponent
+    SampleComponent,
+    ModificationComponent
   ],
   imports: [
     ReactiveFormsModule ,
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
-    // FormGroup
+    ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
