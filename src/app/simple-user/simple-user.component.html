@@ -2,15 +2,25 @@
  <div class="logo" style="background-color:#f8f8fa;position:fixed;width:100%;">
   
   <div class="menu">
-    <nav class="navbar navbar-expand-lg bg-light" style="margin-left: -50px;">
-      <div><img src="photo1.jpg" data-toggle="modal" data-target="#exampleModal"></div>
-      <div class="titre" style="border-radius: 5px;background-color:blue;width:60%;margin-left:3px;height: 30px;">
-        <a href="page_admistrateur2.php"><p class="text-center" style="margin-bottom :40px;font-weight:bold;
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div><img src="../images.jpeg" data-toggle="modal" data-target="#exampleModal"></div>
+      <div class="containere"style="border-radius: 5px;background-color:blue;width:60%;margin-left:40%;height: 30px;">
+        
+        <a  routerLink="simple"><p class="text-center" style="margin-bottom :40px;font-weight:bold;
           color:#f8f9fa;">PAGE UTILISATEUR </p></a>
+           <div>
+            <form action="" method="get" >
+              <div style=" padding-left:70%;display:flex;justify-content:center;align-items:center;margin-left: 110%;margin-top: 35%;">
+              <input class="form_control" type="search" placeholder="rechercher"style="height: 30px;"name="search">
+              <button class="btn-successe" type="submit"style="height: 30px;background-color:
+        green;">recherche</button>
+              </div>
+              
+            </form></div>
         </div> 
-      <div class="container-fluid" style="margin-left:80%;">
+      <div class="container-fluid" style="margin-left:10%;">
        
-        <button class="btn btn-outline-success" type="submit"><a href=""> Déconnection</a></button>
+        <button class="btn btn-outline-success" type="submit"><a routerLink=""> Déconnection</a></button>
       </div>
     </nav>
     
@@ -24,14 +34,15 @@
    
 <div class="table-responsive mask d-flex align-items-center h-100 gradient-custom-3">
  
-<div class="table-responsive mask d-flex align-items-center h-100 gradient-custom-3" style="display: block; "></div>
-<table class="table table-bordered container">
+<div class="table-responsive mask d-flex align-items-center h-100 gradient-custom-3" ></div>
+<table class="table table-bordered container" style="margin-top:-20%; ">
     <thead>
-      <tr style="background-color: blue;">
-        <th scope="col">Matricule</th>
+      <tr style="background-color: blue;color: #f8f8fa;">
         <th scope="col">Prénom</th>
         <th scope="col">Nom</th>
         <th scope="col">Email</th>
+        <th scope="col">Matricule</th>
+        <th scope="col">Date Inscription</th>
       </tr>
     </thead>
     <tbody style="background:rgba(143, 211, 244, 0.5);">

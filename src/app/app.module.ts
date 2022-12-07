@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import { ReactiveFormsModule } from '@angular/forms';
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-=======
  import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
->>>>>>> dev
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminUserComponent } from './admin-user/admin-user.component';
@@ -16,19 +10,18 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { HeaderComponent } from './header/header.component';
 import { ArchiveListComponent } from './archive-list/archive-list.component';
 import { ActiveListComponent } from './active-list/active-list.component';
-<<<<<<< HEAD
-import { CostumerrorDirective } from './costumerror.directive';
+import { SampleComponent } from './sample/sample.component';
 import { InputComponent } from './input/input.component';
 import { SelectComponent } from './select/select.component';
-=======
-import { SampleComponent } from './sample/sample.component';
+import { ModificationComponent } from './modification/modification.component';
 
 
 
->>>>>>> dev
 
 @NgModule({
   declarations: [
+  InputComponent,
+  SelectComponent,
     AppComponent,
     AdminUserComponent,
     SimpleUserComponent,
@@ -37,23 +30,15 @@ import { SampleComponent } from './sample/sample.component';
     HeaderComponent,
     ArchiveListComponent,
     ActiveListComponent,
-<<<<<<< HEAD
-    CostumerrorDirective,
-    InputComponent,
-    SelectComponent
-=======
-    SampleComponent
->>>>>>> dev
+    SampleComponent,
+    ModificationComponent
   ],
   imports: [
     ReactiveFormsModule ,
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
-    ReactiveFormsModule
-=======
-    // FormGroup
->>>>>>> dev
+    ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

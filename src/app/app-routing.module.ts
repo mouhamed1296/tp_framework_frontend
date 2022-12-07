@@ -6,7 +6,10 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { HeaderComponent } from './header/header.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { SimpleUserComponent } from './simple-user/simple-user.component';
+import { ArchiveListComponent} from './archive-list/archive-list.component';
+import { ModificationComponent } from './modification/modification.component';
 /* mais vues */
+import './archive-list/archive-list.component.css';
 const routes: Routes = [
     {path:"admin", component: AdminUserComponent},
     {path: 'simple', component: SimpleUserComponent},
@@ -14,6 +17,8 @@ const routes: Routes = [
     {path:"", pathMatch: "full", component: ConnexionComponent},
     {path: 'inscrire', component: InscriptionComponent},
     {path: 'entete', component: HeaderComponent},
+    {path: 'archive', component: ArchiveListComponent},
+    {path: 'modif', component: ModificationComponent},
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
