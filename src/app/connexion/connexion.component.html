@@ -1,19 +1,64 @@
 <header></header>
-<div>
-  <form>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Mot de Pass</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Envoiyer</button>
-</form>
-</div>
+
+  <section  class="vh-100 bg-image"
+    style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card" style="border-radius: 15px; width: 120%;height: 600px;">
+              <div class="card-body p-5">
+                <h2 class="text-uppercase text-center mb-5">PAGE DE CONNEXION</h2>
+
+                 <form (submit)="onSubmit()" [formGroup]="registerForm">
+                    <div class="form-outline mb-4">
+                      <!-- explication controle saisie à faire -->
+                    <label class="form-label" for="form3Example3cg">Email</label>
+                    <input type="email" id="form3Example3cg" class="form-control form-control-lg "name = "email" placeholder = "email"
+
+                    [ngClass]="{'is-invalid':submitted && registerForm.controls['email'].errors}" formControlName="email"
+                    />
+                    <div *ngIf="submitted && registerForm.controls['email'].errors" class="text-danger">
+                      <div *ngIf="submitted && registerForm.controls['email'].errors['required']">
+                        Email Address is required
+                      </div>
+                      <div *ngIf="submitted && registerForm.controls['email'].errors['email']">
+                        Email Address is not Valid
+                      </div>
+                    </div>
+                   </div>
+
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example4cg">Password</label>
+                    <input type="password" id="form3Example4cg" class="form-control form-control-lg "name = "passwd"
+                    placeholder = "passwd" formControlName = "passwd"  minlength="5"
+
+                    [ngClass]="{'is-invalid':submitted && registerForm.controls['password'].errors}" formControlName="password"
+                    />
+                    <!-- controle de saisie & component.ts -->
+                    <div *ngIf="submitted && registerForm.controls['password'].errors" class="text-danger">
+                      <div *ngIf="submitted && registerForm.controls['password'].errors['required']">
+                        Password is required
+                      </div>
+                      <div *ngIf="submitted && registerForm.controls['password'].errors['minlength']">
+                        Password should be atleast 6 characters
+                      </div>
+                    </div>
+                <!--  -->
+                  </div>
+                    <div class="d-flex justify-content-center">
+                    <button type="submit"
+                      class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">CONNEXION</button>
+                  </div>
+                  <div class="d-flex justify-content-center" class="text-uppercase text-center mb-3" style="margin-top: 10%;">
+                    <a href=""><p>INSCRIPTION</p></a>
+                  </div>
+                </form>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+

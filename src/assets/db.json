@@ -1,0 +1,28 @@
+[
+  {
+    "matricule": "MU2022/1",
+    "nom": "Sarr",
+    "prenom": "Mamadou",
+    "email": "test@gmail.com",
+    "role": "administrateur",
+    "mdp": "passer@01",
+    "photo": null,
+    "etat": 1,
+    "date_inscription": "2022-02-12 12:00:00",
+    "date_modification": null,
+    "date_archivage": null
+  },
+  {
+    "matricule": "MU2022/2",
+    "nom": "Diallo",
+    "prenom": "Assane",
+    "email": "test1@gmail.com",
+    "role": "administrateur",
+    "mdp": "passer@01",
+    "photo": null,
+    "etat": 1,
+    "date_inscription": "2022-02-12 12:00:00",
+    "date_modification": null,
+    "date_archivage": null
+  }
+]
