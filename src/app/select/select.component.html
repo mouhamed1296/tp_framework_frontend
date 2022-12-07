@@ -1,0 +1,6 @@
+<div class="form-group">
+  <label [for]="inputId" class="form-label">{{ label }}</label>
+  <select [name]="inputId" [id]="inputId" class="form-select">
+    <option *ngFor="let option of options" [value]="option.value">{{ option.description }}</option>
+  </select>
+</div>
