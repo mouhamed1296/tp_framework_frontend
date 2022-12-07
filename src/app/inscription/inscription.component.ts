@@ -17,12 +17,12 @@ export class InscriptionComponent implements OnInit {
   title = "ReactiveForms";
   donne: any
   tpForm = new FormGroup ({
-    prenom: new FormControl('',[Validators.required, Validators.minLength(1)]),
+    prenom: new FormControl('',[Validators.required, ]),
     nom: new FormControl('',Validators.required),
-    email: new FormControl('',[Validators.required, Validators.email]),
+    email: new FormControl('',[Validators.required, Validators.email,]),
     role: new FormControl('',Validators.required),
-    mdp: new FormControl('', [Validators.required]),
-    cmdp: new FormControl('', [Validators.required])
+    mdp: new FormControl('', [Validators.required,Validators.minLength(6)]),
+    cmdp: new FormControl('', [Validators.required ,Validators.minLength(6)])
    });
 
    /* onFileSelected(event){
@@ -44,7 +44,7 @@ export class InscriptionComponent implements OnInit {
       this.donne = value
       console.log(value.role);
       if (this.donne.mdp !== this.donne.cmdp) {
-        this.tpForm.controls.cmdp.setErrors(Validators.pattern(this.donne.mdp))
+        this.tpForm.controls.cmdp.setErrors(Validators.pattern(this.donne.mdp),)
       }
     })
    }
