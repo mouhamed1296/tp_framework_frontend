@@ -10,11 +10,11 @@
 export class AppComponent {
   title = 'tp_framework_frontend';
   registerForm!:FormGroup
-  
+
   submitted=false
- 
+
   constructor(private formBuilder:FormBuilder){}
-  
+
   ngOnInit(){
     this.registerForm = this.formBuilder.group({
       firstName:['',[Validators.required,Validators.minLength(4)]],
@@ -26,9 +26,9 @@ export class AppComponent {
 
   onSubmit(){
     this.submitted = true
-    
+
     if(this.registerForm.invalid){
-      return 
+      return
     }
     alert("Success")
   }

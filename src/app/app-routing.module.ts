@@ -10,7 +10,7 @@ import { SimpleUserComponent } from './simple-user/simple-user.component';
 const routes: Routes = [
     {path:"admin", component: AdminUserComponent},
     {path: 'simple', component: SimpleUserComponent},
-    {path: 'heroes-list', component: ActiveListComponent},
+    {path: 'active-list', component: ActiveListComponent},
     {path:"", pathMatch: "full", component: ConnexionComponent},
     {path: 'inscrire', component: InscriptionComponent},
     {path: 'entete', component: HeaderComponent},
