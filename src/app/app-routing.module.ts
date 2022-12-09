@@ -19,7 +19,9 @@ const routes: Routes = [
     {path: 'entete', component: HeaderComponent},
     {path: 'archive', component: ArchiveListComponent},
     {path: 'modif', component: ModificationComponent},
+    {path: 'connexion', component: ConnexionComponent},
 ];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

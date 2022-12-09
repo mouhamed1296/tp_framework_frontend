@@ -12,7 +12,7 @@ export class InputComponent implements OnInit {
   @Input() label = ''
   @Input() type = ''
   @Input() placeholder = ''
-
+  @Input() class= ''
   errorMessages: Record<string, string> =  {
     required: "Ce Champ est requis",
     pattern: "Email invalide",
