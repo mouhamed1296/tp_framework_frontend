@@ -23,6 +23,7 @@ export class InscriptionComponent implements OnInit {
     role: new FormControl('',Validators.required),
     mdp: new FormControl('', [Validators.required,Validators.minLength(6)]),
     cmdp: new FormControl('', [Validators.required ,Validators.minLength(6)])
+
    });
 
    /* onFileSelected(event){
@@ -48,6 +49,7 @@ export class InscriptionComponent implements OnInit {
       }
     })
    }
+   
 
    ngOnInit(): void {
 
