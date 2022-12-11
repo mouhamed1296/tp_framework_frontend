@@ -31,7 +31,9 @@ import { ModificationComponent } from './modification/modification.component';
     ArchiveListComponent,
     ActiveListComponent,
     SampleComponent,
-    ModificationComponent
+    ModificationComponent,
+    InputComponent,
+    SelectComponent
   ],
   imports: [
     ReactiveFormsModule ,
