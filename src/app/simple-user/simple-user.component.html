@@ -1,6 +1,6 @@
 
 <section  class="vh-100 bg-image">
-   
+
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">  <span class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownMenuLink"
@@ -12,10 +12,10 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
-       
+
         <div class="container">
         <h2 class="text-uppercase text-center mb-5">SIMPLE USER</h2></div>
-        <button type="button" class="btn btn-primary">DÉCONNEXION</button>
+        <button (click)="logout()" type="button" class="btn btn-primary">DÉCONNEXION</button>
       </div>
     </div>
   </nav>
@@ -36,21 +36,22 @@
             <th scope="col">Prénom</th>
             <th scope="col">Nom</th>
             <th scope="col">Email</th>
-           
+            <th scope="col">Date inscription</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Bara</td>
-            <td>Ba</td>
-            <td>@gmail.com</td>
+          <tr *ngFor="let user of users">
+            <th scope="row">{{ user.matricule }}</th>
+            <td>{{ user.prenom }}</td>
+            <td>{{user.nom}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.date_inscription | date: 'le d MMMM yyyy'}}</td>
           </tr>
-    
+
         </tbody>
       </table>
     </div>
-    
+
 </section>
 <nav>
   <ul class="pagination fixed-bottom justify-content-center">

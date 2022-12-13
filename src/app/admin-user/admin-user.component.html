@@ -1,9 +1,13 @@
 <nav class="navbar  navbar-brand navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <span>
+    <div class="d-flex gap-3">
     <img   src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp" class="rounded-circle"
       height="60" alt="Avatar" loading="lazy" />
-</span>
+      <div class="d-flex flex-column gap-2">
+        <span>{{ fullname }}</span>
+        <span>{{ matricule }}</span>
+      </div>
+</div>
 
     <div class="collapse navbar-collapse  justify-content-md-end" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -19,7 +23,7 @@
             </a>
         </li>
       </ul>
-        <button type="button" class="btn btn-primary d-flex">Déconnexion<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+        <button type="button" (click)="logout()" class="btn btn-primary d-flex">Déconnexion<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
           <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
         </svg></button>
@@ -27,7 +31,7 @@
   </div>
 </nav>
 
-  <nav class="navbar bg-white">
+  <nav class="navbar bg-white m-5">
     <div class="container-fluid">
       <a class="navbar-brand"></a>
       <form class="d-flex" role="search">
@@ -37,28 +41,31 @@
     </div>
   </nav>
 
-<div class="table-responsive">
-<table class="table table-bordered">
+<div class="table-responsive m-5">
+<table class="table table-bordered table-striped">
     <thead>
-      <tr>
+      <tr class="bg-primary text-white">
         <th scope="col">Matricule</th>
         <th scope="col">Prénom</th>
         <th scope="col">Nom</th>
         <th scope="col">Email</th>
+        <th scope="col">Role</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Bara</td>
-        <td>Ba</td>
-        <td>@gmail.com</td>
-        <td >
-          <div>
+      <tr *ngFor="let user of (users | filterActive | pagination: 0)">
+        <td>{{ user.matricule }}</td>
+        <td>{{ user.nom }}</td>
+        <td>{{ user.prenom }}</td>
+        <td>{{ user.email }}</td>
+        <td *ngIf="user.role == 'admin'" class="text-success">{{ user.role }}</td>
+        <td *ngIf="user.role == 'utilisateur'" class="text-secondary">{{ user.role }}</td>
+        <td>
+          <div class="d-flex gap-3">
           <a href="" ><i class="bi bi-archive-fill"></i></a>
           <a routerLink="modif"><i class="bi bi-pencil-square"></i></a>
-          <a href=""><i class="bi bi-person-up"></i></a>
+          <button type="submit"><i class="bi bi-person-up"></i></button>
           </div>
         </td>
       </tr>
@@ -66,3 +73,4 @@
     </tbody>
   </table>
 </div>
+<!-- <hello [page]="users.length" #pageinator></hello> -->

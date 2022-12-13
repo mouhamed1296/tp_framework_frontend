@@ -2,20 +2,25 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from './models/User';
+import { collection } from './database/db';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private http:HttpClient) { }
-  login(email:string, password:string): Observable<any> {
-    return this.http.post<any>(`/api/login`, { email, password})
+  usersCollection: any
+  constructor() {
+    this.usersCollection = collection;
   }
-  logout(): Observable<any>  {
-    return this.http.post<any>(`/api/logout`, null)
+  login(email:string, password:string) {
+    let user = null;
+    return this.usersCollection.findOne({ email: email, mdp: password})
+    /* console.log(email, password); */
   }
-  register(user: User): Observable<any>  {
-    return this.http.post<any>(`/api/register`, {...user})
+  logout() {
+    localStorage.removeItem('nom')
+    localStorage.removeItem('prenom')
+    localStorage.removeItem('matricule')
   }
 }

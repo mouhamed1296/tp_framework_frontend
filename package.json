@@ -23,6 +23,7 @@
     "jquery": "^3.4.1",
     "primeicons": "^6.0.1",
     "primeng": "^15.0.0-rc.1",
+    "realm-web": "^2.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
