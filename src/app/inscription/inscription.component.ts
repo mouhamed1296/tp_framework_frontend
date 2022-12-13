@@ -80,7 +80,7 @@ export class InscriptionComponent implements OnInit {
     });
 
     //Verifier si un utilisateur avec le même email existe déja
-    if (user != null) {
+    if (user == null) {
       //Si le mail existe enregistrer
       let reponse = await this.userService.addUser(this.donne);
       if(reponse) {
