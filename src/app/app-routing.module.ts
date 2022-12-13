@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { ActiveListComponent } from './active-list/active-list.component';
 import { AdminUserComponent } from './admin-user/admin-user.component';
 import { ConnexionComponent } from './connexion/connexion.component';
-import { HeaderComponent } from './header/header.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { SimpleUserComponent } from './simple-user/simple-user.component';
 import { ArchiveListComponent} from './archive-list/archive-list.component';
@@ -16,7 +15,6 @@ const routes: Routes = [
     {path: 'active-list', component: ActiveListComponent},
     {path:"", pathMatch: "full", component: ConnexionComponent},
     {path: 'inscrire', component: InscriptionComponent},
-    {path: 'entete', component: HeaderComponent},
     {path: 'archive', component: ArchiveListComponent},
     {path: 'modif', component: ModificationComponent},
     {path: 'connexion', component: ConnexionComponent},

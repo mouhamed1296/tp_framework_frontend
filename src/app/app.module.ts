@@ -1,4 +1,4 @@
- import { NgModule } from '@angular/core';
+ import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -10,10 +10,14 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { HeaderComponent } from './header/header.component';
 import { ArchiveListComponent } from './archive-list/archive-list.component';
 import { ActiveListComponent } from './active-list/active-list.component';
-import { SampleComponent } from './sample/sample.component';
 import { InputComponent } from './input/input.component';
 import { SelectComponent } from './select/select.component';
 import { ModificationComponent } from './modification/modification.component';
+import { HttpClientModule } from '@angular/common/http';
+import { registerLocaleData } from '@angular/common';
+import * as fr from '@angular/common/locales/fr';
+import { FilterActivePipe } from './filter-active.pipe';
+import { PaginationPipe } from './pagination.pipe';
 
 
 
@@ -30,19 +34,30 @@ import { ModificationComponent } from './modification/modification.component';
     HeaderComponent,
     ArchiveListComponent,
     ActiveListComponent,
-    SampleComponent,
-    ModificationComponent
+    ModificationComponent,
+    InputComponent,
+    SelectComponent,
+    FilterActivePipe,
+    PaginationPipe
   ],
   imports: [
     ReactiveFormsModule ,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    HttpClientModule
 
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'fr-FR'}
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    registerLocaleData(fr.default);
+  }
+
+ }
 
 
