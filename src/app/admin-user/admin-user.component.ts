@@ -26,6 +26,7 @@ export class AdminUserComponent implements OnInit {
   }
   async getAllUsers() {
     this.users = await this.userService.getUsers()
+    this.users = this.users.filter(user => user.matricule !== this.matricule)
   }
   logout() {
     this.authService.logout();
