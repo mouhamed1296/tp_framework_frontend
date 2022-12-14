@@ -1,6 +1,6 @@
  import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminUserComponent } from './admin-user/admin-user.component';
@@ -17,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { registerLocaleData } from '@angular/common';
 import * as fr from '@angular/common/locales/fr';
 import { FilterActivePipe } from './filter-active.pipe';
-import { PaginationPipe } from './pagination.pipe';
+import { PaginationComponent } from './pagination/pagination.component';
+import { SearchPipe } from './search.pipe';
 
 
 
@@ -38,14 +39,16 @@ import { PaginationPipe } from './pagination.pipe';
     InputComponent,
     SelectComponent,
     FilterActivePipe,
-    PaginationPipe
+    PaginationComponent,
+    SearchPipe
   ],
   imports: [
     ReactiveFormsModule ,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
 
   ],
   providers: [
