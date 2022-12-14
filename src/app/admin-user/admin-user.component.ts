@@ -14,10 +14,7 @@ export class AdminUserComponent implements OnInit {
   fullname: string|null = null;
   matricule: string|null = null;
   searchTerm!: string;
-  constructor(private userService: UserService, private authService: AuthService, private router: Router) {
-    console.log(this.searchTerm);
-
-  }
+  constructor(private userService: UserService, private authService: AuthService, private router: Router) {}
   async ngOnInit() {
     if(!localStorage.getItem('matricule')) {
       this.router.navigate(['/']);

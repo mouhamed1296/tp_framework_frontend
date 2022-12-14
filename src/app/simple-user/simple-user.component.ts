@@ -10,11 +10,16 @@ import { UserService } from '../user.service';
 })
 export class SimpleUserComponent  implements OnInit{
   users: User[] = [];
+  searchTerm!: string;
+  fullname: string|null = null;
+  matricule: string|null = null;
   constructor(private userService: UserService, private authService: AuthService, private router:Router) {}
   async ngOnInit() {
     if(!localStorage.getItem('matricule')) {
       this.router.navigate(['/']);
     }
+    this.fullname = localStorage.getItem('fullname');
+    this.matricule = localStorage.getItem('matricule');
     this.getAllUsers();
   }
   async getAllUsers() {

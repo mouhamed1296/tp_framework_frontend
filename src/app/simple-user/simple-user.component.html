@@ -1,37 +1,36 @@
 
 <section  class="vh-100 bg-image">
 
-  <nav class="navbar navbar-expand-lg bg-light">
+  <nav class="navbar navbar-expand-lg bg-primary text-white">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">  <span class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownMenuLink"
-        role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-        <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp" class="rounded-circle"
-          height="50" alt="Avatar" loading="lazy" />
-    </span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <div class="d-flex gap-3">
+        <img   src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp" class="rounded-circle"
+          height="60" alt="Avatar" loading="lazy" />
+          <div class="d-flex flex-column gap-2">
+            <span>{{ fullname }}</span>
+            <span>{{ matricule }}</span>
+          </div>
+    </div>
       <div class="collapse navbar-collapse" id="navbarText">
 
         <div class="container">
         <h2 class="text-uppercase text-center mb-5">SIMPLE USER</h2></div>
-        <button (click)="logout()" type="button" class="btn btn-primary">DÉCONNEXION</button>
+        <button (click)="logout()" type="button" class="btn btn-dark">DÉCONNEXION</button>
       </div>
     </div>
   </nav>
-  <nav class="navbar bg-white">
-    <div class="container-fluid">
+  <nav class="navbar bg-white mx-5 mt-4">
+    <div class="">
       <a class="navbar-brand"></a>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-primary" type="submit">Search</button>
+        <input class="form-control" name="searchTerm" [(ngModel)]="searchTerm" type="text" placeholder="Search" aria-label="Search">
       </form>
     </div>
   </nav>
-  <div class="table-responsive container">
-    <table class="table table-bordered ">
+  <div class="table-responsive mx-5">
+    <table class="table table-bordered table-striped">
         <thead>
-          <tr>
+          <tr class="bg-primary text-white">
             <th scope="col">Matricule</th>
             <th scope="col">Prénom</th>
             <th scope="col">Nom</th>
@@ -40,31 +39,27 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let user of users">
-            <th scope="row">{{ user.matricule }}</th>
-            <td>{{ user.prenom }}</td>
-            <td>{{user.nom}}</td>
-            <td>{{user.email}}</td>
-            <td>{{user.date_inscription | date: 'le d MMMM yyyy'}}</td>
-          </tr>
-
+          <ng-container *ngIf="searchTerm; else elseBlock">
+            <tr *ngFor="let user of users | search:searchTerm | slice : (pagination.currentPage - 1) * pagination.pageSize : pagination.currentPage * pagination.pageSize">
+              <th scope="row">{{ user.matricule }}</th>
+              <td>{{ user.prenom }}</td>
+              <td>{{user.nom}}</td>
+              <td>{{user.email}}</td>
+              <td>{{user.date_inscription | date: 'le d MMMM yyyy'}}</td>
+            </tr>
+          </ng-container>
+          <ng-template #elseBlock>
+            <tr *ngFor="let user of users | filterActive | slice : (pagination.currentPage - 1) * pagination.pageSize : pagination.currentPage * pagination.pageSize">
+              <th scope="row">{{ user.matricule }}</th>
+              <td>{{ user.prenom }}</td>
+              <td>{{user.nom}}</td>
+              <td>{{user.email}}</td>
+              <td>{{user.date_inscription | date: 'le d MMMM yyyy'}}</td>
+            </tr>
+          </ng-template>
         </tbody>
       </table>
     </div>
-
+    <app-pagination #pagination [collectionSize]="users.length" [pageSize]="5" [firstLastButtons]="true" [maxSize]="2">
+    </app-pagination>
 </section>
-<nav>
-  <ul class="pagination fixed-bottom justify-content-center">
-                 <!-- Lien vers la page précédente (désactivé si on se trouve sur la 1ère page) -->
-                 <li class="page-item ">
-                     <a href="?page=" class="page-link"> <span aria-hidden="true">&laquo;</span></a>
-                 </li>
-
-
-                   <!-- Lien vers la page suivante (désactivé si on se trouve sur la dernière page) -->
-                  <li class="page-item ">
-                     <a href="?page=" class="page-link"><span aria-hidden="true">&raquo;</span></a>
-                 </li>
-             </ul>
-         </nav>
-
