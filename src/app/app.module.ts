@@ -19,6 +19,7 @@ import * as fr from '@angular/common/locales/fr';
 import { FilterActivePipe } from './filter-active.pipe';
 import { PaginationComponent } from './pagination/pagination.component';
 import { SearchPipe } from './search.pipe';
+import { FilterInactivePipe } from './filter-inactive.pipe';
 
 
 
@@ -40,7 +41,8 @@ import { SearchPipe } from './search.pipe';
     SelectComponent,
     FilterActivePipe,
     PaginationComponent,
-    SearchPipe
+    SearchPipe,
+    FilterInactivePipe
   ],
   imports: [
     ReactiveFormsModule ,

@@ -12,7 +12,6 @@ import './archive-list/archive-list.component.css';
 const routes: Routes = [
     {path:"admin", component: AdminUserComponent},
     {path: 'simple', component: SimpleUserComponent},
-    {path: 'active-list', component: ActiveListComponent},
     {path:"", pathMatch: "full", component: ConnexionComponent},
     {path: 'inscrire', component: InscriptionComponent},
     {path: 'archive', component: ArchiveListComponent},
