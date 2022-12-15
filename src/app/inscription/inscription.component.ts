@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
-import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { AbstractControl, ValidatorFn } from '@angular/forms';
+import { Observable } from 'rxjs';
 import { User } from '../models/User';
 import { UserService } from '../user.service';
 
@@ -16,6 +16,8 @@ import { UserService } from '../user.service';
 })
 
 export class InscriptionComponent implements OnInit {
+  profilePicture!: string;
+  /* urllink: string ="assets/image/sarr.png"; */
   title = "ReactiveForms";
   donne: any;
   message: string | null = null
@@ -41,9 +43,41 @@ export class InscriptionComponent implements OnInit {
     role: new FormControl('',Validators.required),
     mdp: new FormControl('', [Validators.required,Validators.minLength(6)]),
     cmdp: new FormControl('', [Validators.required ,Validators.minLength(6)])
-
    });
 
+ProfilePicture(e: any) {
+    this.getBase64(e.target.files[0])
+        .subscribe((str: string) => {
+          console.log(str);
+
+          this.profilePicture = str
+        });
+  }
+
+   getBase64(file: Blob): Observable<string> {
+    console.log(file);
+
+    return new Observable<string>(sub => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        sub.next(reader.result?.toString());
+        sub.complete();
+      };
+      reader.onerror = error => {
+        sub.error(error);
+      };
+    })
+  }
+  /*  selectFiles(event:any){
+    if (event.target.files){
+    var  reader =new FileReader()
+      reader.readAsDataURL(event.target.files[0])
+      reader.onload = (event:any)=>{
+        this.urllink = event.target.result
+       }
+    }
+   } */
 
    options = [
     {value: "", description: ""},
@@ -51,6 +85,7 @@ export class InscriptionComponent implements OnInit {
     {value: "utilisateur", description: "Utilisateur"},
    ]
 
+  imageService: any;
    changeRole(e: any) {
     this.tpForm.controls.role?.setValue(e.target.value, {onlySelf: true})
    }
@@ -71,6 +106,10 @@ export class InscriptionComponent implements OnInit {
     this.donne.date_inscription = new Date().toDateString();
     this.donne.date_modification = null;
     this.donne.date_archivage = null;
+    this.donne.photo = this.profilePicture;
+    console.log(this.donne.photo);
+
+
     delete this.donne.cmdp;
 
     //Récupérer l'utilisateur par son mail si elle existe

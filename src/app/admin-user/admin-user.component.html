@@ -1,7 +1,9 @@
 <nav class="navbar  navbar-brand navbar-expand-lg bg-light">
   <div class="container-fluid">
     <div class="d-flex gap-3">
-    <img   src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp" class="rounded-circle"
+    <img *ngIf="photo != null" style="object-fit: cover;"   [src]="photo" class="rounded"
+      height="60" alt="Avatar" loading="lazy" />
+      <img *ngIf="photo == null" style="object-fit: cover;"  src="assets/color2.png" class="rounded"
       height="60" alt="Avatar" loading="lazy" />
       <div class="d-flex flex-column gap-2">
         <span>{{ fullname }}</span>
@@ -41,6 +43,14 @@
   </nav>
 
 <div class="table-responsive m-5">
+ <div class="mb-3">
+  <span *ngIf="success!=''" class="bg-success text-white p-2 rounded-2">
+    {{success}}
+  </span>
+  <span *ngIf="message!=''" class="bg-danger text-white p-2 rounded-2">
+    {{message}}
+  </span>
+ </div>
 <table class="table table-bordered table-striped">
     <thead>
       <tr class="bg-primary text-white">
@@ -63,9 +73,9 @@
           <td *ngIf="user.role == 'utilisateur'" class="text-secondary">{{ user.role }}</td>
           <td>
             <div class="d-flex gap-3">
-            <a href="" ><i class="bi bi-archive-fill"></i></a>
-            <a routerLink="modif"><i class="bi bi-pencil-square"></i></a>
-            <button type="submit"><i class="bi bi-person-up"></i></button>
+              <button class=" border-0 text-danger" [value]="user.email" (click)="archive($event)" ><i class="bi bi-archive-fill"></i></button>
+              <a routerLink="/modif" [queryParams]="{email: user.email}"><i class="bi bi-pencil-square"></i></a>
+              <button class=" border-0 text-success" value]="user.email" (click)="switchRole($event)"><i class="bi bi-person-up"></i></button>
             </div>
           </td>
         </tr>
@@ -80,9 +90,9 @@
           <td *ngIf="user.role == 'utilisateur'" class="text-secondary">{{ user.role }}</td>
           <td>
             <div class="d-flex gap-3">
-            <a href="" ><i class="bi bi-archive-fill"></i></a>
-            <a routerLink="modif"><i class="bi bi-pencil-square"></i></a>
-            <button type="submit"><i class="bi bi-person-up"></i></button>
+            <button class=" border-0 text-danger" [value]="user.email" (click)="archive($event)" ><i class="bi bi-archive-fill"></i></button>
+            <a routerLink="/modif" [queryParams]="{email: user.email}"><i class="bi bi-pencil-square"></i></a>
+            <button class=" border-0 text-success" [value]="user.email" (click)="switchRole($event)"><i class="bi bi-person-up"></i></button>
             </div>
           </td>
         </tr>
