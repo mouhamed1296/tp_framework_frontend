@@ -1,0 +1,101 @@
+<!-- As a link -->
+<nav class="navbar row mb-3 ">
+  <div class="container-fluid col-md-2">
+
+  </div>
+</nav>
+
+      <form (submit)="onSubmit()">
+        <div class="align-items-center container">
+          <h1 class="text-white bg-primary  p-2 rounded text-center " >Inscription</h1>
+          </div>
+        <div  class="container">
+
+          <span *ngIf="message != null" class=" p-2 bg-success
+           text-white">{{ message }}</span>
+           <span *ngIf="error != null" class=" p-2
+           text-danger">{{ error }}</span>
+          <div  class="row mb-3">
+          <div  class="col-md-6">
+            <app-input
+              [control]="tpForm.controls.prenom"
+              inputId="prenom"
+              label="Prénom"
+              type="text"
+              placeholder="Votre prénom">
+            </app-input>
+            </div>
+
+            <div  class="col-md-6">
+            <app-input
+              [control]="tpForm.controls.nom"
+              inputId="nom"
+              label="Nom"
+              type="text"
+              placeholder="Votre nom">
+            </app-input>
+            </div>
+            </div>
+            <div  class="row mb-3">
+              <div  class="col-md-6">
+            <app-input
+              [control]="tpForm.controls.email"
+              inputId="email"
+              label="Email"
+              type="text"
+              placeholder="Votre adresse email">
+            </app-input>
+              </div>
+              <div  class="col-md-6">
+            <app-select
+              inputId="role"
+              label="Role"
+              [options]="options"
+              (change)="changeRole($event)"
+              >
+            </app-select>
+          </div>
+        </div>
+        <div  class="row mb-3">
+          <div  class="col-md-6">
+            <app-input
+              [control]="tpForm.controls.mdp"
+              inputId="mdp"
+              label="Choisir un mot de pass"
+              type="password"
+              placeholder="Votre mot de pass">
+            </app-input>
+            </div>
+              <div  class="col-md-6">
+            <app-input
+              [control]="tpForm.controls.cmdp"
+              inputId="cmdp"
+
+              label="Confirmer le mot de pass"
+              type="password"
+              placeholder="confirmer">
+            </app-input>
+            </div>
+            </div>
+            <label for="photo">Photo</label>
+            <div  class="row mb-3" >
+              <div  class="col-md-6">
+                <div class="row mb-3">
+                <div class="file-loading">
+                    <input id="photo" class="form-control" name="input-image" type="file" accept="image/*">
+                </div>
+              </div>
+            </div>
+            <div  class="col-md-6">
+              <a href="">j'ai déja un compte </a>
+            </div>
+            </div>
+          </div>
+          <div class="container">
+            <div  class="row align-items-start">
+            </div>
+            <button (click)="onSubmit()" [disabled]="tpForm.invalid" type="button" class="btn btn-primary">Envoyer</button>
+            </div>
+</form>
+
+

@@ -1,0 +1,708 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>tp-framework-frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">tp-framework-frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  ConnexionComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/connexion/connexion.component.ts</code>
+</p>
+
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-connexion</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./connexion.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./connexion.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#donne" >donne</a>
+                            </li>
+                            <li>
+                                <a href="#registerForm" >registerForm</a>
+                            </li>
+                            <li>
+                                <a href="#submitted" >submitted</a>
+                            </li>
+                            <li>
+                                <a href="#title" >title</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onSubmit" >onSubmit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(formBuilder: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, authService: <a href="../injectables/AuthService.html" target="_self">AuthService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/connexion/connexion.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/app/connexion/connexion.component.ts:34</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubmit"></a>
+                    <span class="name">
+                        <span ><b>onSubmit</b></span>
+                        <a href="#onSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSubmit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">src/app/connexion/connexion.component.ts:42</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="donne"></a>
+                    <span class="name">
+                        <span ><b>donne</b></span>
+                        <a href="#donne"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/connexion/connexion.component.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registerForm"></a>
+                    <span class="name">
+                        <span ><b>registerForm</b></span>
+                        <a href="#registerForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/connexion/connexion.component.ts:13</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="submitted"></a>
+                    <span class="name">
+                        <span ><b>submitted</b></span>
+                        <a href="#submitted"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/connexion/connexion.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="title"></a>
+                    <span class="name">
+                        <span ><b>title</b></span>
+                        <a href="#title"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;tp_framework_frontend&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/connexion/connexion.component.ts:12</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { FormGroup, FormControl, Validators ,FormBuilder} from &#x27;@angular/forms&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { AuthService } from &#x27;../auth.service&#x27;;
+@Component({
+  selector: &#x27;app-connexion&#x27;,
+  templateUrl: &#x27;./connexion.component.html&#x27;,
+  styleUrls: [&#x27;./connexion.component.css&#x27;]
+})
+export class ConnexionComponent {
+
+    title &#x3D; &#x27;tp_framework_frontend&#x27;;
+    registerForm!:FormGroup
+    donne: any &#x3D; {};
+
+    submitted&#x3D;false
+   /* on a injecter formbuilder de type formbuilder */
+    constructor(private formBuilder:FormBuilder, private authService:AuthService, private router:Router){
+      this.registerForm &#x3D; this.formBuilder.group({
+        email:[&#x27;&#x27;,[Validators.required,Validators.email,
+          Validators.pattern(&quot;^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{3,4}$&quot;)]],
+        password:[&#x27;&#x27;,[Validators.required,Validators.minLength(6)]]
+      })
+
+      //Récupération des données
+      this.registerForm.valueChanges.subscribe((data) &#x3D;&gt; {
+      this.donne &#x3D; {...data}
+
+      }
+      )
+    }
+
+    /* on appel formbuilder &amp; le group et lister les champs */
+    ngOnInit(){
+      /* this.registerForm &#x3D; this.formBuilder.group({
+        email:[&#x27;&#x27;,[Validators.required,Validators.email,
+          Validators.pattern(&quot;^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{3,4}$&quot;)]],
+        password:[&#x27;&#x27;,[Validators.required,Validators.minLength(6)]]
+      }) */
+    }
+
+    onSubmit(){
+      this.submitted &#x3D; true
+
+      if(this.registerForm.invalid){
+        return
+      }
+     const reponse &#x3D; this.authService.login(this.donne.email, this.donne.password);
+     reponse.then((user: any) &#x3D;&gt;
+     {
+      if(user) {
+        localStorage.setItem(&#x27;fullname&#x27;, user.prenom + &#x27; &#x27; + user.nom)
+        localStorage.setItem(&#x27;matricule&#x27;, user.matricule)
+        localStorage.setItem(&#x27;photo&#x27;, user.photo)
+        if (user.role &#x3D;&#x3D;&#x3D; &#x27;admin&#x27;) {
+          this.router.navigate([&#x27;/admin&#x27;])
+        } else {
+          this.router.navigate([&#x27;/simple&#x27;])
+        }
+       } else {
+        alert(&quot;error&quot;);
+      }
+     })
+
+
+    }
+  }
+
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;header&gt;&lt;/header&gt;
+
+  &lt;section  class&#x3D;&quot;vh-100 bg-image&quot;
+    style&#x3D;&quot;background-image: url(&#x27;https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp&#x27;);&quot;&gt;
+    &lt;div class&#x3D;&quot;mask d-flex align-items-center h-100 gradient-custom-3&quot;&gt;
+      &lt;div class&#x3D;&quot;container h-100&quot;&gt;
+        &lt;div class&#x3D;&quot;row d-flex justify-content-center align-items-center h-100&quot;&gt;
+          &lt;div class&#x3D;&quot;col-12 col-md-9 col-lg-7 col-xl-6&quot;&gt;
+            &lt;div class&#x3D;&quot;card&quot; style&#x3D;&quot;border-radius: 15px; width: 120%;height: 600px;&quot;&gt;
+              &lt;div class&#x3D;&quot;card-body p-5&quot;&gt;
+                &lt;h2 class&#x3D;&quot;text-uppercase text-center mb-5&quot;&gt;PAGE DE CONNEXION&lt;/h2&gt;
+
+                 &lt;form (submit)&#x3D;&quot;onSubmit()&quot; [formGroup]&#x3D;&quot;registerForm&quot;&gt;
+                    &lt;div class&#x3D;&quot;form-outline mb-4&quot;&gt;
+                      &lt;!-- explication controle saisie à faire --&gt;
+                    &lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;form3Example3cg&quot;&gt;Email&lt;/label&gt;
+                    &lt;input type&#x3D;&quot;email&quot; id&#x3D;&quot;form3Example3cg&quot; class&#x3D;&quot;form-control form-control-lg &quot;name &#x3D; &quot;email&quot; placeholder &#x3D; &quot;email&quot;
+
+                    [ngClass]&#x3D;&quot;{&#x27;is-invalid&#x27;:submitted &amp;&amp; registerForm.controls[&#x27;email&#x27;].errors}&quot; formControlName&#x3D;&quot;email&quot;
+                    /&gt;
+                    &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; registerForm.controls[&#x27;email&#x27;].errors&quot; class&#x3D;&quot;text-danger&quot;&gt;
+                      &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; registerForm.controls[&#x27;email&#x27;].errors[&#x27;required&#x27;]&quot;&gt;
+                        Email Address is required
+                      &lt;/div&gt;
+                      &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; registerForm.controls[&#x27;email&#x27;].errors[&#x27;email&#x27;]&quot;&gt;
+                        Email Address is not Valid
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                   &lt;/div&gt;
+
+                  &lt;div class&#x3D;&quot;form-outline mb-4&quot;&gt;
+                    &lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;form3Example4cg&quot;&gt;Password&lt;/label&gt;
+                    &lt;input type&#x3D;&quot;password&quot; id&#x3D;&quot;form3Example4cg&quot; class&#x3D;&quot;form-control form-control-lg &quot;name &#x3D; &quot;passwd&quot;
+                    placeholder &#x3D; &quot;passwd&quot; formControlName &#x3D; &quot;passwd&quot;  minlength&#x3D;&quot;5&quot;
+
+                    [ngClass]&#x3D;&quot;{&#x27;is-invalid&#x27;:submitted &amp;&amp; registerForm.controls[&#x27;password&#x27;].errors}&quot; formControlName&#x3D;&quot;password&quot;
+                    /&gt;
+                    &lt;!-- controle de saisie &amp; component.ts --&gt;
+                    &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; registerForm.controls[&#x27;password&#x27;].errors&quot; class&#x3D;&quot;text-danger&quot;&gt;
+                      &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; registerForm.controls[&#x27;password&#x27;].errors[&#x27;required&#x27;]&quot;&gt;
+                        Password is required
+                      &lt;/div&gt;
+                      &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; registerForm.controls[&#x27;password&#x27;].errors[&#x27;minlength&#x27;]&quot;&gt;
+                        Password should be atleast 6 characters
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;!--  --&gt;
+                  &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;d-flex justify-content-center&quot;&gt;
+                    &lt;button type&#x3D;&quot;submit&quot;
+                      class&#x3D;&quot;btn btn-success btn-block btn-lg gradient-custom-4 text-body&quot;&gt;CONNEXION&lt;/button&gt;
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;d-flex justify-content-center&quot; class&#x3D;&quot;text-uppercase text-center mb-3&quot; style&#x3D;&quot;margin-top: 10%;&quot;&gt;
+                    &lt;a routerLink&#x3D;&quot;inscrire&quot;&gt;&lt;p&gt;INSCRIPTION&lt;/p&gt;&lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./connexion.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><header></header>  <section  class="vh-100 bg-image"    style="background-image: url(\'https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp\');">    <div class="mask d-flex align-items-center h-100 gradient-custom-3">      <div class="container h-100">        <div class="row d-flex justify-content-center align-items-center h-100">          <div class="col-12 col-md-9 col-lg-7 col-xl-6">            <div class="card" style="border-radius: 15px; width: 120%;height: 600px;">              <div class="card-body p-5">                <h2 class="text-uppercase text-center mb-5">PAGE DE CONNEXION</h2>                 <form (submit)="onSubmit()" [formGroup]="registerForm">                    <div class="form-outline mb-4">                      <!-- explication controle saisie à faire -->                    <label class="form-label" for="form3Example3cg">Email</label>                    <input type="email" id="form3Example3cg" class="form-control form-control-lg "name = "email" placeholder = "email"                    [ngClass]="{\'is-invalid\':submitted && registerForm.controls[\'email\'].errors}" formControlName="email"                    />                    <div *ngIf="submitted && registerForm.controls[\'email\'].errors" class="text-danger">                      <div *ngIf="submitted && registerForm.controls[\'email\'].errors[\'required\']">                        Email Address is required                      </div>                      <div *ngIf="submitted && registerForm.controls[\'email\'].errors[\'email\']">                        Email Address is not Valid                      </div>                    </div>                   </div>                  <div class="form-outline mb-4">                    <label class="form-label" for="form3Example4cg">Password</label>                    <input type="password" id="form3Example4cg" class="form-control form-control-lg "name = "passwd"                    placeholder = "passwd" formControlName = "passwd"  minlength="5"                    [ngClass]="{\'is-invalid\':submitted && registerForm.controls[\'password\'].errors}" formControlName="password"                    />                    <!-- controle de saisie & component.ts -->                    <div *ngIf="submitted && registerForm.controls[\'password\'].errors" class="text-danger">                      <div *ngIf="submitted && registerForm.controls[\'password\'].errors[\'required\']">                        Password is required                      </div>                      <div *ngIf="submitted && registerForm.controls[\'password\'].errors[\'minlength\']">                        Password should be atleast 6 characters                      </div>                    </div>                <!--  -->                  </div>                    <div class="d-flex justify-content-center">                    <button type="submit"                      class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">CONNEXION</button>                  </div>                  <div class="d-flex justify-content-center" class="text-uppercase text-center mb-3" style="margin-top: 10%;">                    <a routerLink="inscrire"><p>INSCRIPTION</p></a>                  </div>                </form>                </div>            </div>          </div>        </div>      </div>    </div>  </section></div>'
+    var COMPONENTS = [{'name': 'ActiveListComponent', 'selector': 'app-active-list'},{'name': 'AdminUserComponent', 'selector': 'app-admin-user'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ArchiveListComponent', 'selector': 'app-archive-list'},{'name': 'ConnexionComponent', 'selector': 'app-connexion'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'InputComponent', 'selector': 'app-input'},{'name': 'InscriptionComponent', 'selector': 'app-inscription'},{'name': 'InscriptionComponent', 'selector': 'app-inscription'},{'name': 'ModificationComponent', 'selector': 'app-modification'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PaginationComponent', 'selector': 'app-pagination'},{'name': 'SelectComponent', 'selector': 'app-select'},{'name': 'SimpleUserComponent', 'selector': 'app-simple-user'}];
+    var DIRECTIVES = [{'name': 'CostumerrorDirective', 'selector': '[appCostumerror]'}];
+    var ACTUAL_COMPONENT = {'name': 'ConnexionComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ConnexionComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
