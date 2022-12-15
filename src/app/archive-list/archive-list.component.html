@@ -41,6 +41,14 @@
   </nav>
 
 <div class="table-responsive m-5">
+  <div class="mb-3">
+    <span *ngIf="success!=''" class="bg-success text-white p-2 rounded-2">
+      {{success}}
+    </span>
+    <span *ngIf="message!=''" class="bg-danger text-white p-2 rounded-2">
+      {{message}}
+    </span>
+   </div>
 <table class="table table-bordered table-striped">
     <thead>
       <tr class="bg-primary text-white">
@@ -54,7 +62,7 @@
     </thead>
     <tbody>
       <ng-container *ngIf="searchTerm; else elseBlock">
-        <tr *ngFor="let user of users | search:searchTerm | slice : (pagination.currentPage - 1) * pagination.pageSize : pagination.currentPage * pagination.pageSize">
+        <tr *ngFor="let user of users | searchInactif:searchTerm | slice : (pagination.currentPage - 1) * pagination.pageSize : pagination.currentPage * pagination.pageSize">
           <td>{{ user.matricule }}</td>
           <td>{{ user.nom }}</td>
           <td>{{ user.prenom }}</td>
@@ -63,9 +71,7 @@
           <td *ngIf="user.role == 'utilisateur'" class="text-secondary">{{ user.role }}</td>
           <td>
             <div class="d-flex gap-3">
-            <a href="" ><i class="bi bi-archive-fill"></i></a>
-            <a routerLink="modif"><i class="bi bi-pencil-square"></i></a>
-            <button type="submit"><i class="bi bi-person-up"></i></button>
+              <button class=" border-0 text-primary" [value]="user.email"  (click)="desarchiveUser($event)" ><i class="bi bi-archive"></i></button>
             </div>
           </td>
         </tr>
@@ -80,7 +86,7 @@
           <td *ngIf="user.role == 'utilisateur'" class="text-secondary">{{ user.role }}</td>
           <td>
             <div class="d-flex gap-3">
-            <a href="" ><i class="bi bi-archive"></i></a>
+            <button class=" border-0 text-primary" [value]="user.email"  (click)="desarchiveUser($event)" ><i class="bi bi-archive"></i></button>
             </div>
           </td>
         </tr>

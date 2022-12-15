@@ -51,6 +51,7 @@ export class ConnexionComponent {
       if(user) {
         localStorage.setItem('fullname', user.prenom + ' ' + user.nom)
         localStorage.setItem('matricule', user.matricule)
+        localStorage.setItem('photo', user.photo)
         if (user.role === 'admin') {
           this.router.navigate(['/admin'])
         } else {
